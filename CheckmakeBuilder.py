@@ -36,11 +36,14 @@ class CheckmakeBuilder(object):
         self.debug: bool = self.org_debug.lower() == "true"
         self.config: Path = Path(self.org_config)
 
+    def _surround_double_quotes(x: str):
+        return '"' + str(x) + '"'
+
     def _generate(self) -> str:
         command = ["checkmake"]
         if self.debug:
             command.append("--debug")
-        command.append(self.makefile)
+        command.append(self._surround_double_quotes(self.makefile))
         return " ".join(command)
 
     def run(self) -> str:

@@ -1,13 +1,5 @@
 from CheckmakeBuilder import CheckmakeBuilder
 import argparse
-import subprocess
-import sys
-import os
-from pathlib import Path
-
-
-def surround_double_quotes(x: str):
-    return '"' + str(x) + '"'
 
 
 parser = argparse.ArgumentParser(description="Validate the argument of lizard")
