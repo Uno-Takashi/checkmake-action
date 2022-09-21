@@ -1,8 +1,26 @@
-name: "Lizard Runner"
-description: "GitHub action to lint your python code with lizard"
+name: "checkmake action"
+description: "GitHub action to lint your makefile with checkmake"
 branding:
-  icon: "wind"
+  icon: "check-circle"
   color: "yellow"
+inputs:
+  path:
+    description: "Makefile path"
+    required: false
+    default: "./Makefile"
+  debug:
+    description: "enable debug mode"
+    required: false
+    default: "False"
+  config:
+    description: "configure path"
+    required: false
+    default: ""
+
 runs:
   using: "docker"
   image: "Dockerfile"
+  args:
+    - ${{ inputs.path }}
+    - ${{ inputs.debug }}
+    - ${{ inputs.config }}
