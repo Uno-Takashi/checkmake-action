@@ -19,15 +19,6 @@ args = parser.parse_args()
 
 CheckmakeBuilder(args.makefile, args.debug, args.config)
 
-commands = ["checkmake"]
-
-
-result = subprocess.run(
-    "checkmake -h",
-    shell=True,
-    stdout=subprocess.PIPE,
-    stderr=subprocess.PIPE,
-    text=True,
-)
+result = CheckmakeBuilder.run()
 print(result.stdout)
 print(result.stderr)
