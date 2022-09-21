@@ -21,6 +21,6 @@ runs:
   using: "docker"
   image: "Dockerfile"
   args:
-    - ${{ inputs.path }}
+    - ${{ inputs.makefile }}
     - ${{ inputs.debug }}
     - ${{ inputs.config }}
