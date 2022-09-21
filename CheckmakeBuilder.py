@@ -36,7 +36,7 @@ class CheckmakeBuilder(object):
         self.debug: bool = self.org_debug.lower() == "true"
         self.config: Path = Path(self.org_config)
 
-    def _surround_double_quotes(x: str):
+    def _surround_double_quotes(self, x: Path):
         return '"' + str(x) + '"'
 
     def _generate(self) -> str:
