@@ -12,7 +12,7 @@ jobs:
       - name: Lizard Runner
         uses: Uno-Takashi/lizard-runner@v3
         with:
-          path: "./django_dynamic_shields"
+          path: "./src"
           language: "python"
   actionlint:
     runs-on: ubuntu-latest
