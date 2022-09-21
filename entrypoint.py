@@ -12,6 +12,8 @@ args = parser.parse_args()
 cmb = CheckmakeBuilder(args.makefile, args.debug, args.config)
 
 result = cmb.run()
+
 print(result.stdout)
 print(result.stderr)
+
 sys.exit(result.returncode)
