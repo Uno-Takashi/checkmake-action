@@ -51,9 +51,7 @@ class CheckmakeBuilder(object):
         self._validate()
         print("::endgroup::")
         self._prepare()
-        print("::group::checkmake " + str(self.makefile))
         command = self._generate()
-        print(command)
         result = subprocess.run(
             command,
             shell=True,
@@ -61,5 +59,4 @@ class CheckmakeBuilder(object):
             stderr=subprocess.PIPE,
             text=True,
         )
-        print("::endgroup::")
         return result

@@ -13,3 +13,6 @@ jobs:
       - name: test-action
         uses: ./
         id: checkmake
+        with:
+          makefile: "tests/Makefile"
+          debug: false
