@@ -1,0 +1,8 @@
+name: "Lizard Runner"
+description: "GitHub action to lint your python code with lizard"
+branding:
+  icon: "wind"
+  color: "yellow"
+runs:
+  using: "docker"
+  image: "Dockerfile"
