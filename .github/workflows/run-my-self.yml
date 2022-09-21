@@ -15,4 +15,4 @@ jobs:
         id: checkmake
         with:
           makefile: "tests/Makefile"
-          debug: true
+          debug: false
