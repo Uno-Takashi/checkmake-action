@@ -1,6 +1,6 @@
 from CheckmakeBuilder import CheckmakeBuilder
 import argparse
-
+import sys
 
 parser = argparse.ArgumentParser(description="Validate the argument of lizard")
 parser.add_argument("makefile", type=str)
@@ -14,3 +14,4 @@ cmb = CheckmakeBuilder(args.makefile, args.debug, args.config)
 result = cmb.run()
 print(result.stdout)
 print(result.stderr)
+sys.exit(result.returncode)
