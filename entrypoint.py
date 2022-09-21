@@ -17,8 +17,8 @@ parser.add_argument("config", type=str)
 
 args = parser.parse_args()
 
-CheckmakeBuilder(args.makefile, args.debug, args.config)
+cmb = CheckmakeBuilder(args.makefile, args.debug, args.config)
 
-result = CheckmakeBuilder.run()
+result = cmb.run()
 print(result.stdout)
 print(result.stderr)
