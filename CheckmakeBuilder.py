@@ -13,6 +13,7 @@ class CheckmakeBuilder(object):
         self.org_makefile: str = makefile
         self.org_debug: str = debug
         self.org_config: str = config
+        print(self.org_makefile)
 
     def _validate(self) -> None:
         is_makefile = os.path.isfile(self.org_makefile)
