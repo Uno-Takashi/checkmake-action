@@ -41,7 +41,7 @@ class CheckmakeBuilder(object):
         if self.debug:
             command.append("--debug")
         command.append(self.makefile)
-        return b" ".join(command)
+        return " ".join(command)
 
     def run(self) -> str:
         print("::group::Validate")
