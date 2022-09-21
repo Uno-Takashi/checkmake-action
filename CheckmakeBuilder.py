@@ -46,7 +46,7 @@ class CheckmakeBuilder(object):
         self._validate()
         print("::endgroup::")
         self._prepare()
-        print("::group::checkmake " + self.config)
+        print("::group::checkmake " + str(self.config))
         command = self._generate
         result = subprocess.run(
             command,
