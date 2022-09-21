@@ -38,7 +38,6 @@ class CheckmakeBuilder(object):
 
     def _generate(self) -> str:
         command = ["checkmake"]
-        command.append("--debug")
         if self.debug:
             command.append("--debug")
         command.append(self.makefile)
@@ -50,7 +49,7 @@ class CheckmakeBuilder(object):
         print("::endgroup::")
         self._prepare()
         print("::group::checkmake " + str(self.makefile))
-        command = self._generate
+        command = self._generate()
         print(command)
         result = subprocess.run(
             command,
