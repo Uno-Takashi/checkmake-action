@@ -1,5 +1,6 @@
 # checkmake-action
 
+[![Test](https://github.com/Uno-Takashi/checkmake-action/actions/workflows/run-my-self.yml/badge.svg?branch=main)](https://github.com/Uno-Takashi/checkmake-action/actions/workflows/run-my-self.yml)
 [![Code Quality](https://github.com/Uno-Takashi/checkmake-action/actions/workflows/code-quality.yml/badge.svg?branch=main)](https://github.com/Uno-Takashi/checkmake-action/actions/workflows/code-quality.yml)
 
 checkmake-action is a third-party OSS Github Action for easy execution of [checkmake](https://github.com/mrtazz/checkmake).This action uses [cytopia/docker-checkmake](https://github.com/cytopia/docker-checkmake).
