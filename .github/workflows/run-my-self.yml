@@ -13,7 +13,11 @@ jobs:
       - name: test-action
         continue-on-error: true
         uses: ./
-        id: checkmake
+        id: checkmake_case1
         with:
-          makefile: "tests/Makefile"
+          makefile: "tests/makefiles/TestCase1.Makefile"
           debug: false
+      - name: Case1 Error Check
+        if: ${{ steps.checkmake_case1.outcome != 'failure' }}
+        run: |
+          exit 1
