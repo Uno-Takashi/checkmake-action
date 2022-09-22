@@ -2,7 +2,7 @@
 
 [![Code Quality](https://github.com/Uno-Takashi/checkmake-action/actions/workflows/code-quality.yml/badge.svg?branch=main)](https://github.com/Uno-Takashi/checkmake-action/actions/workflows/code-quality.yml)
 
-checkmake-action is a third-party OSS Github Action for easy execution of [checkmake](https://github.com/mrtazz/checkmake).
+checkmake-action is a third-party OSS Github Action for easy execution of [checkmake](https://github.com/mrtazz/checkmake).This action uses [cytopia/docker-checkmake](https://github.com/cytopia/docker-checkmake).
 
 - **Rapid Container**
   - The checkmake-action employs a lightweight container based on [Alpile](https://hub.docker.com/r/cytopia/checkmake). In most cases, preparation to begin analysis takes less than 30 seconds in github-hosted runner.
