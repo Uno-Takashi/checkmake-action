@@ -46,11 +46,13 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 18
-      - run: >
+      - name: install textlint
+        run: >
           npm install -g
-            textlint
-            textlint-rule-spelling
-            dictionary-en
-            textlint-rule-abbr-within-parentheses
-            textlint-rule-common-misspellings
-      - run: textlint ./README.md
+          textlint
+          textlint-rule-spelling
+          dictionary-en
+          textlint-rule-abbr-within-parentheses
+          textlint-rule-common-misspellings
+      - name: run textlint
+        run: textlint ./README.md
