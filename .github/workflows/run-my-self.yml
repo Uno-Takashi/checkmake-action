@@ -1,4 +1,4 @@
-name: checkmake-action
+name: Test
 
 on:
   push:
