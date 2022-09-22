@@ -10,7 +10,7 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-      - name: test-action
+      - name: test:case1
         continue-on-error: true
         uses: ./
         id: checkmake_case1
@@ -19,5 +19,16 @@ jobs:
           debug: false
       - name: Case1 Error Check
         if: ${{ steps.checkmake_case1.outcome != 'failure' }}
+        run: |
+          exit 1
+      - name: test:case1
+        continue-on-error: true
+        uses: ./
+        id: checkmake_case1_debug
+        with:
+          makefile: "tests/makefiles/TestCase1.Makefile"
+          debug: true
+      - name: Case1 Error Check
+        if: ${{ steps.checkmake_case1_debug.outcome != 'failure' }}
         run: |
           exit 1
