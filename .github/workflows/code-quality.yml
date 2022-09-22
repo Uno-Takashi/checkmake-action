@@ -22,14 +22,20 @@ jobs:
   yamllint:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - name: yaml-lint
         uses: ibiqlik/action-yamllint@v3
   hadolint:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - uses: hadolint/hadolint-action@v2.0.0
         with:
           dockerfile: ./Dockerfile
           ignore: "DL3006,DL3018,DL3018"
+  markdownlint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Lint changelog file
+        uses: avto-dev/markdown-lint@v1

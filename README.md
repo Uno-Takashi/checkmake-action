@@ -34,6 +34,16 @@ jobs:
         uses: Uno-Takashi/checkmake-action@main
 ```
 
+chackemake execution options can be passed as arguments. For example, to specify a file to be analyzed or to activate debug mode, do the following
+
+```yaml
+      - name: checkmake action
+        uses: Uno-Takashi/checkmake-action@main
+        with:
+          makefile: "path/to/Makefile"
+          debug: true
+```
+
 ## 📥 Inputs
 
 ## 📤 Outputs
