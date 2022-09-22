@@ -48,9 +48,9 @@ jobs:
           node-version: 18
       - run: >
           npm install -g
-            textlint
-            textlint-rule-spelling
-            dictionary-en
-            textlint-rule-abbr-within-parentheses
-            textlint-rule-common-misspellings
+          textlint
+          textlint-rule-spelling
+          dictionary-en
+          textlint-rule-abbr-within-parentheses
+          textlint-rule-common-misspellings
       - run: textlint ./README.md
