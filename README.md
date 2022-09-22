@@ -10,7 +10,7 @@ checkmake-action is a third-party OSS Github Action for easy execution of [check
 - **Easy-to-use variable specification**
   - Wrapping command line arguments allows for more intuitive execution.
 - **Can be embedded in CI**
-  - You can Keep beautiful your Makefile everytime.
+  - You can Keep beautiful your Makefile every time.
 
 ## 🗞️ Introduction
 

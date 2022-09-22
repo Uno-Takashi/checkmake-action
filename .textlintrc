@@ -1,0 +1,17 @@
+{
+  "filters": {},
+  "rules": {
+    "abbr-within-parentheses": true,
+    "spelling": {
+      "language": "en",
+      "skipPatterns": [
+        "JavaScript"
+      ],
+      "wordDefinitionRegexp": "/[\\w']+/g",
+      "suggestCorrections": true
+    },
+    "common-misspellings": {
+      "ignore": []
+    }
+  }
+}

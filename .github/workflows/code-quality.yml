@@ -39,3 +39,18 @@ jobs:
       - uses: actions/checkout@v3
       - name: Lint
         uses: avto-dev/markdown-lint@v1
+  textlint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 18
+      - run: >
+          npm install -g
+            textlint
+            textlint-rule-spelling
+            dictionary-en
+            textlint-rule-abbr-within-parentheses
+            textlint-rule-common-misspellings
+      - run: textlint ./README.md
