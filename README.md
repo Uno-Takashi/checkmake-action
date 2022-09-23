@@ -49,3 +49,11 @@ chackemake execution options can be passed as arguments. For example, to specify
 ## 📤 Outputs
 
 ## 🛒 How to Get
+
+## ⌨ Develop
+
+You can test it using GitHub-Hosted Runner. However, if you prefer to run your tests in a local environment, you can do so using [act](https://github.com/nektos/act).
+
+```shell
+act -W .\.github\workflows\run-my-self.yml
+```
