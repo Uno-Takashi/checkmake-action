@@ -32,3 +32,10 @@ jobs:
         if: ${{ steps.checkmake_case1_debug.outcome != 'failure' }}
         run: |
           exit 1
+      - name: test:case1
+        continue-on-error: true
+        uses: ./
+        id: checkmake_case1_config
+        with:
+          makefile: "tests/makefiles/TestCase1.Makefile"
+          config: "tests/makefiles/config"

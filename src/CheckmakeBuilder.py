@@ -4,6 +4,8 @@ from pathlib import Path
 
 
 class CheckmakeBuilder(object):
+    BASE_COMMAND = "checkmake"
+
     def __init__(
         self,
         makefile: str,
@@ -13,7 +15,6 @@ class CheckmakeBuilder(object):
         self.org_makefile: str = makefile
         self.org_debug: str = debug
         self.org_config: str = config
-        print(self.org_makefile)
 
     def _validate(self) -> None:
         is_makefile = os.path.isfile(self.org_makefile)
@@ -34,15 +35,20 @@ class CheckmakeBuilder(object):
     def _prepare(self):
         self.makefile: Path = Path(self.org_makefile)
         self.debug: bool = self.org_debug.lower() == "true"
-        self.config: Path = Path(self.org_config)
+        if self.org_config != "":
+            self.config: Path = Path(self.org_config)
+        else:
+            self.config = None
 
     def _surround_double_quotes(self, x: Path):
         return '"' + str(x) + '"'
 
     def _generate(self) -> str:
-        command = ["checkmake"]
+        command = [self.BASE_COMMAND]
         if self.debug:
             command.append("--debug")
+        if self.config:
+            command.append("--config=" + self._surround_double_quotes(self.config))
         command.append(self._surround_double_quotes(self.makefile))
         return " ".join(command)
 
@@ -52,6 +58,7 @@ class CheckmakeBuilder(object):
         print("::endgroup::")
         self._prepare()
         command = self._generate()
+        print(command)
         result = subprocess.run(
             command,
             shell=True,

@@ -11,7 +11,7 @@ inputs:
   debug:
     description: "enable debug mode"
     required: false
-    default: "False"
+    default: "false"
   config:
     description: "configure path"
     required: false
