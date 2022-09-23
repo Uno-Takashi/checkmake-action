@@ -14,7 +14,11 @@ checkmake-action is a third-party OSS Github Action for easy execution of [check
 
 ## 🗞️ Introduction
 
-## 🛠️ Why We Built It
+linter can make codes beautiful.However, there are relatively few instances of running linter against Makefile.
+
+We believe the cause of this problem is probably the complexity of preparing to run the linter for Makefile.
+
+For this reason, we have created a Github action that makes it easy to run checkmake!
 
 ## 📚 Usage
 
@@ -55,5 +59,5 @@ chackemake execution options can be passed as arguments. For example, to specify
 You can test it using GitHub-Hosted Runner. However, if you prefer to run your tests in a local environment, you can do so using [act](https://github.com/nektos/act).
 
 ```shell
-act -W .\.github\workflows\run-my-self.yml
+act -W ./.github/workflows/test-my-self.yml
 ```
