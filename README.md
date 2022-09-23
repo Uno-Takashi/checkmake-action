@@ -14,9 +14,7 @@ checkmake-action is a third-party OSS Github Action for easy execution of [check
 
 ## 🗞️ Introduction
 
-linter can make codes beautiful.However, there are relatively few instances of running linter against Makefile.
-
-We believe the cause of this problem is probably the complexity of preparing to run the linter for Makefile.
+linter can make codes beautiful.However, there are relatively few instances of running linter against Makefile.We believe the cause of this problem is probably the complexity of preparing to run the linter for Makefile.
 
 For this reason, we have created a Github action that makes it easy to run checkmake!
 
