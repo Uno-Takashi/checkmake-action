@@ -12,10 +12,7 @@ args = parser.parse_args()
 
 cmb = CheckmakeBuilder(args.makefile, args.debug, args.config)
 
-try:
-    result = cmb.run()
-except:
-    sys.exit(1)
+result = cmb.run()
 
 print(result.stdout)
 print(result.stderr)
