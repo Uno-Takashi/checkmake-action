@@ -68,3 +68,14 @@ jobs:
           makefile: "tests/makefiles/TestCase2.Makefile"
           debug: true
           config: "tests/makefiles/config"
+      - name: test:case2-path
+        run: echo -e ${{ steps.checkmake_case2_config.outputs.cli_output_file }}
+  checkmake-main:
+    runs-on: ubuntu-latest
+    name: test-action-main
+    steps:
+      - uses: actions/checkout@v3
+      - name: checkmake action
+        uses: Uno-Takashi/checkmake-action@main
+        with:
+          makefile: "tests/makefiles/TestCase2.Makefile"
