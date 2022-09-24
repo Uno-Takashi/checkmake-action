@@ -89,6 +89,8 @@ If the outputs is referenced in a later Action, it will look like this
 
 ## 🛒 How to Get
 
+[checkmake action · Actions · GitHub Marketplace](https://github.com/marketplace/actions/checkmake-action)
+
 ## ⌨ Develop
 
 You can test it using GitHub-Hosted Runner. However, if you prefer to run your tests in a local environment, you can do so using [act](https://github.com/nektos/act).
