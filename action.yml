@@ -20,7 +20,7 @@ inputs:
     required: false
     default: ""
   cli_output_file:
-    description: "Specify the name of the file in which to save the cli output results."
+    description: "name of the file in which to save the cli output."
     required: false
     default: "./checkmake_cli_output.txt"
 
