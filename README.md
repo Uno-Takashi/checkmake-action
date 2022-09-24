@@ -70,6 +70,10 @@ The paths to the two files are output. The following outputs can be accessed via
 |-----------------|----------------------------------------------------------------------------------|
 | `cli_output_file` | The path to the file where the output result of cli is saved when checkmake is run. |
 
+### See outputs
+
+If the outputs is referenced in a later Action, it will look like this
+
 ```yaml
       - uses: Uno-Takashi/checkmake-action@main
         id: checkmake
@@ -79,11 +83,7 @@ The paths to the two files are output. The following outputs can be accessed via
         run: echo -e ${{ steps.checkmake.outputs.cli_output_file }}
 ```
 
-### See outputs
-
-If the outputs is referenced in a later Action, it will look like this
-
-```shell
+```shell:output
 path/to/text.txt
 ```
 
