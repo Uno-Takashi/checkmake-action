@@ -57,13 +57,13 @@ jobs:
           makefile: "tests/makefiles/TestCase2.Makefile"
       - name: test:case2
         uses: ./
-        id: checkmake_case2
+        id: checkmake_case2_debug
         with:
           makefile: "tests/makefiles/TestCase2.Makefile"
           debug: true
       - name: test:case2
         uses: ./
-        id: checkmake_case2
+        id: checkmake_case2_config
         with:
           makefile: "tests/makefiles/TestCase2.Makefile"
           debug: true
