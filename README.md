@@ -57,12 +57,18 @@ All arguments are optional.
 
 | Name            | Default                      | Description                                                                                                                                   |
 |-----------------|------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------|
-| makefile        | "./Makefile"                 | The path given to the command. The checkmake is executed against this path.                                                                   |
-| config          | ""                           | Configuration file to read                                                                                                                    |
-| debug           | false                        | If "true", the flag argument is specified in the checkmake execution.                                                                         |
-| cli_output_file | "./checkmake_cli_output.txt" | Specify the name of the file in which to save the cli output results. If spaces are present, the file is treated as a file containing spaces. |
+| `makefile`        | "./Makefile"                 | The path given to the command. The checkmake is executed against this path.                                                                   |
+| `config`          | ""                           | Configuration file to read                                                                                                                    |
+| `debug`           | false                        | If "true", the flag argument is specified in the checkmake execution.                                                                         |
+| `cli_output_file` | "./checkmake_cli_output.txt" | Specify the name of the file in which to save the cli output results. If spaces are present, the file is treated as a file containing spaces. |
 
 ## 📤 Outputs
+
+The paths to the two files are output. The following outputs can be accessed via ${{ steps.{id}.outputs.{output} }} from this action
+
+| Name            | Description                                                                      |
+|-----------------|----------------------------------------------------------------------------------|
+| `cli_output_file` | The path to the file where the output result of cli is saved when checkmake is run. |
 
 ## 🛒 How to Get
 
