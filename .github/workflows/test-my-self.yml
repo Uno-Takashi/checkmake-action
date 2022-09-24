@@ -47,7 +47,7 @@ jobs:
           makefile: "tests/makefiles/TestCase1.Makefile"
           config: "tests/makefiles/configure"
       - name: Case1 Error Check
-        if: ${{ steps.checkmake_case1_config_notfound != 'failure' }}
+        if: ${{ steps.checkmake_case1_config_notfound.outcome != 'failure' }}
         run: |
           exit 1
       - name: test:case2
