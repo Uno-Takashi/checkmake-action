@@ -16,11 +16,11 @@ inputs:
     required: false
     default: "false"
   config:
-    description: "configure path"
+    description: "Configuration file to read"
     required: false
     default: ""
   cli_output_file:
-    description: "configure path"
+    description: "Specify the name of the file in which to save the cli output results."
     required: false
     default: "./checkmake_cli_output.txt"
 
