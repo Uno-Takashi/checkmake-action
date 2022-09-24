@@ -83,7 +83,7 @@ If the outputs is referenced in a later Action, it will look like this
         run: echo -e ${{ steps.checkmake.outputs.cli_output_file }}
 ```
 
-```shell:output
+```shell
 >>> path/to/text.txt
 ```
 
