@@ -21,5 +21,8 @@ print(result.stderr)
 if args.cli_output_file != "":
     with open(args.cli_output_file, mode="w") as f:
         f.write(result.stdout)
+    print("::set-output name=cli_output_file::" + str(args.cli_output_file))
+else:
+    print("::set-output name=cli_output_file::")
 
 sys.exit(result.returncode)

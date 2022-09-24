@@ -1,8 +1,11 @@
 name: "checkmake action"
+
 description: "GitHub action to lint your makefile with checkmake"
+
 branding:
   icon: "check-circle"
   color: "yellow"
+
 inputs:
   makefile:
     description: "Makefile path"
@@ -20,6 +23,10 @@ inputs:
     description: "configure path"
     required: false
     default: "./checkmake_cli_output.txt"
+
+outputs:
+  cli_output_file:
+    description: ""
 
 runs:
   using: "docker"
