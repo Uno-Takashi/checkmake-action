@@ -16,6 +16,10 @@ inputs:
     description: "configure path"
     required: false
     default: ""
+  cli_output_file:
+    description: "configure path"
+    required: false
+    default: "./checkmake_cli_output.txt"
 
 runs:
   using: "docker"
@@ -24,3 +28,4 @@ runs:
     - ${{ inputs.makefile }}
     - ${{ inputs.debug }}
     - ${{ inputs.config }}
+    - ${{ inputs.cli_output_file }}

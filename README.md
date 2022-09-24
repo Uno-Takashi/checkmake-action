@@ -60,7 +60,7 @@ All arguments are optional.
 | makefile        | "./Makefile"                 | The path given to the command. The checkmake is executed against this path.                                                                   |
 | config          | ""                           | Configuration file to read                                                                                                                    |
 | debug           | false                        | If "true", the flag argument is specified in the checkmake execution.                                                                         |
-| cli_output_path | "./checkmake_cli_output.txt" | Specify the name of the file in which to save the cli output results. If spaces are present, the file is treated as a file containing spaces. |
+| cli_output_file | "./checkmake_cli_output.txt" | Specify the name of the file in which to save the cli output results. If spaces are present, the file is treated as a file containing spaces. |
 
 ## 📤 Outputs
 
