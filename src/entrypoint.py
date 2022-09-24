@@ -1,3 +1,4 @@
+from unittest import expectedFailure
 from CheckmakeBuilder import CheckmakeBuilder
 import argparse
 import sys
@@ -11,7 +12,10 @@ args = parser.parse_args()
 
 cmb = CheckmakeBuilder(args.makefile, args.debug, args.config)
 
-result = cmb.run()
+try:
+    result = cmb.run()
+except:
+    sys.exit(1)
 
 print(result.stdout)
 print(result.stderr)
