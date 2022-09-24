@@ -55,3 +55,16 @@ jobs:
         id: checkmake_case2
         with:
           makefile: "tests/makefiles/TestCase2.Makefile"
+      - name: test:case2
+        uses: ./
+        id: checkmake_case2
+        with:
+          makefile: "tests/makefiles/TestCase2.Makefile"
+          debug: true
+      - name: test:case2
+        uses: ./
+        id: checkmake_case2
+        with:
+          makefile: "tests/makefiles/TestCase2.Makefile"
+          debug: true
+          config: "tests/makefiles/config"

@@ -47,7 +47,20 @@ chackemake execution options can be passed as arguments. For example, to specify
           debug: true
 ```
 
+See "Inputs" for a detailed description of all the arguments that can be set.
+
 ## 📥 Inputs
+
+Most of the input is the same as in the chackmake, but some original input is required for chackemake-action.
+
+All arguments are optional.
+
+| Name            | Default                      | Description                                                                                                                                   |
+|-----------------|------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------|
+| makefile        | "./Makefile"                 | The path given to the command. The checkmake is executed against this path.                                                                   |
+| config          | ""                           | Configuration file to read                                                                                                                    |
+| debug           | false                        | If "true", the flag argument is specified in the checkmake execution.                                                                         |
+| cli_output_path | "./checkmake_cli_output.txt" | Specify the name of the file in which to save the cli output results. If spaces are present, the file is treated as a file containing spaces. |
 
 ## 📤 Outputs
 
