@@ -43,6 +43,7 @@ chackemake execution options can be passed as arguments. For example, to specify
         uses: Uno-Takashi/checkmake-action@main
         with:
           makefile: "path/to/Makefile"
+          config: "path/to/config"
           debug: true
 ```
 
@@ -57,5 +58,5 @@ chackemake execution options can be passed as arguments. For example, to specify
 You can test it using GitHub-Hosted Runner. However, if you prefer to run your tests in a local environment, you can do so using [act](https://github.com/nektos/act).
 
 ```shell
-act -W ./.github/workflows/test-my-self.yml
+act -W ./.github/workflows/test-my-self.yml --rebuild
 ```

@@ -39,3 +39,19 @@ jobs:
         with:
           makefile: "tests/makefiles/TestCase1.Makefile"
           config: "tests/makefiles/config"
+      - name: test:case1
+        continue-on-error: true
+        uses: ./
+        id: checkmake_case1_config_notfound
+        with:
+          makefile: "tests/makefiles/TestCase1.Makefile"
+          config: "tests/makefiles/configure"
+      - name: Case1 Error Check
+        if: ${{ steps.checkmake_case1_config_notfound != 'failure' }}
+        run: |
+          exit 1
+      - name: test:case2
+        uses: ./
+        id: checkmake_case2
+        with:
+          makefile: "tests/makefiles/TestCase2.Makefile"

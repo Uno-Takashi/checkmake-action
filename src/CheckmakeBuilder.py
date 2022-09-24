@@ -19,16 +19,16 @@ class CheckmakeBuilder(object):
     def _validate(self) -> None:
         is_makefile = os.path.isfile(self.org_makefile)
         if not is_makefile:
-            raise FileNotFoundError
+            raise FileNotFoundError("\033[31m" + "Makefile is NotFound" + "\033[0m")
         else:
             print("\033[32m" + "Check existence of Makefile" + "\033[0m")
         if self.org_debug.lower() == "false" or self.org_debug.lower() == "true":
             print("\033[32m" + "Check Debug Flag" + "\033[0m")
         else:
-            raise ValueError
+            raise ValueError("\033[31m" + "Non-flags were given." + "\033[0m")
         is_config = os.path.isfile(self.org_config)
         if not is_config and self.org_config != "":
-            raise FileNotFoundError
+            raise FileNotFoundError("\033[31m" + "Config File is NotFound" + "\033[0m")
         else:
             print("\033[32m" + "Check existence of Config" + "\033[0m")
 
