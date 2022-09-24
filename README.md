@@ -64,7 +64,7 @@ All arguments are optional.
 
 ## 📤 Outputs
 
-The paths to the two files are output. The following outputs can be accessed via ${{ steps.{step_id}.outputs.{output_name} }} from this action
+The paths to a file are output. The following outputs can be accessed via ${{ steps.{step_id}.outputs.{output_name} }} from this action
 
 | Name            | Description                                                                      |
 |-----------------|----------------------------------------------------------------------------------|
@@ -84,7 +84,7 @@ If the outputs is referenced in a later Action, it will look like this
 ```
 
 ```shell:output
-path/to/text.txt
+>>> path/to/text.txt
 ```
 
 ## 🛒 How to Get
