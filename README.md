@@ -64,11 +64,28 @@ All arguments are optional.
 
 ## 📤 Outputs
 
-The paths to the two files are output. The following outputs can be accessed via ${{ steps.{id}.outputs.{output} }} from this action
+The paths to the two files are output. The following outputs can be accessed via ${{ steps.{step_id}.outputs.{output_name} }} from this action
 
 | Name            | Description                                                                      |
 |-----------------|----------------------------------------------------------------------------------|
 | `cli_output_file` | The path to the file where the output result of cli is saved when checkmake is run. |
+
+```yaml
+      - uses: Uno-Takashi/checkmake-action@main
+        id: checkmake
+        with: 
+          cli_output_file: "path/to/text.txt"
+      - name: test:case2-path
+        run: echo -e ${{ steps.checkmake.outputs.cli_output_file }}
+```
+
+### See outputs
+
+If the outputs is referenced in a later Action, it will look like this
+
+```shell
+path/to/text.txt
+```
 
 ## 🛒 How to Get
 
